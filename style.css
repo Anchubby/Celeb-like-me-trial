@@ -1,0 +1,90 @@
+body {
+  background-color: #ffffff;
+}
+
+.profile-pic {
+    width: 200px;
+    max-height: 200px;
+    display: inline-block;
+}
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 100% !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+
+/* // 밑에 죄다 왜 적용안되는지 모르겠음, 아마 Bootstrap stylesheet 쓰면서 중복되면서 밑에거는 적용안되는듯 // */
+.nav-distance {
+  padding: 2% 2%;
+}
+
+.navbar-light .navbar-brand {
+  font-family: NanumSquareR;
+  line-height: 1.68;
+  text-align: left;
+  color: #494072;
+}
+
+.section {
+  margin-top: 500px;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.body {
+  text-align: center;
+}
+
+
+/* media query 적용, 화면 크기 변할때마다 자동으로 변하도록 On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  .navbar-brand {
+    font-size: 2rem;
+  }
+}
+
+.insta-link {
+  color: #f73737;
+}
+
+.insta-link:hover {
+  color: #f73737;
+}
