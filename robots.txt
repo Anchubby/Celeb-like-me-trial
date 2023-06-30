@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://anchubbysite.netlify.app/sitemap.xml
