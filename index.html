@@ -1,7 +1,4 @@
 <!-- // ! tab 누르고 아래와 같이 html 템플릿 넣기 // -->
-
-
-
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +18,28 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title>K pop celebe like me</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <meta name="naver-site-verification" content="f2f81f17a8eb758ba4306e0b5ccc160865eda600" />
-        <!-- 바로 위한줄 네이버에서 검색되도록 하기 위해 인증하는 문장, 네이버 웹마스터 도구 -->
+        <!-- <link href='./style.css' rel='stylesheet'>  내가 갖고 있는 css 파일과 링크 하려면 이걸 써야함, 2개 중복했더니 깨져서 이상하게 나옴 나중에 수정필요 -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- One justification for using !important is when working with multiple stylesheets. For example, if we are using the Bootstrap CSS framework and want to override the styles for one specific HTML element, we can use the !important property.
+        스타일시트 2개이상 쓸때 맘에 드는거에는 !important 붙여서 사용
+        p {
+            color: blue !important;
+          }
+           
+          .main p {
+            color: red;
+          }
 
+        <head>
+          <title>The Rise of Soccer in The US</title>
+          <link href='style.css' rel='stylesheet'>
+          <link href='style-library.css' rel='stylesheet'>
+        </head> -->
+
+
+        
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62c6d29221bac9b5"></script>
 
@@ -97,12 +111,13 @@
 
        <!-- // result-message와 laber-container를 중간에 끼워넣음 -->
        <p class="result-message"></p>
-       <div id="label-container"></div>
+       <div id="label-container" style="display: none;"></div>
+       <!-- 위에 한줄이 중간에 값들 보여주는것, 얼마나 닮았는지, display: none 없애면 다시 보이게됨 -->
+
       
        <!-- // 공유 아이콘 위치 -->
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox"></div>
-            
 
 
        <div class="p-image">
@@ -198,7 +213,7 @@ $(".upload-button").on('click', function() {
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/Tam0q6otb/";
+    const URL = "https://teachablemachine.withgoogle.com/models/uZLLr5oim/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -244,6 +259,13 @@ $(".upload-button").on('click', function() {
         const prediction = await model.predict(image, false);
         prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
         
+
+        // console.log(prediction[0].className);
+        // console.log(prediction[1].className);
+        // console.log(prediction[2].className);
+        // console.log(prediction[3].className);
+        // console.log(prediction[4].className);
+
 
 
         // 밑에는 가장확률 높은거 하나띄우기 위해 추가한 코드
